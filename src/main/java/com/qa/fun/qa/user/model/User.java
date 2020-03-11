@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 
-@Entity
+@Entity(name = "PARTY")
 public class User extends BaseEntity {
 
 	@Id
@@ -18,7 +18,7 @@ public class User extends BaseEntity {
 	public Long id;
 
 	@Column(name = "USER_NAME")
-	private String userName;
+	private String partyName;
 
 	@Column(name = "USER_EMAIL")
 	private String email;
@@ -47,12 +47,12 @@ public class User extends BaseEntity {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getPartyName() {
+		return partyName;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setPartyName(String partyName) {
+		this.partyName = partyName;
 	}
 
 	public String getEmail() {

@@ -1,4 +1,4 @@
-package com.qa.fun.qa.model.entity;
+package com.qa.fun.qa.common.model;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

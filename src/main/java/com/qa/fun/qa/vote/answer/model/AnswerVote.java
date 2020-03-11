@@ -1,13 +1,15 @@
-package com.qa.fun.qa.model.entity;
+package com.qa.fun.qa.vote.answer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.qa.fun.qa.answer.model.Answer;
+import com.qa.fun.qa.common.model.BaseEntity;
+import com.qa.fun.qa.user.model.User;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class QuestionVote  extends BaseEntity {
-
+public class AnswerVote extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -20,15 +22,13 @@ public class QuestionVote  extends BaseEntity {
 	@JsonIgnore
 	private User userVoted;
 
-	@Column(name = "QUESTION_ID")
-	private String questionId;
-
+	@Column(name = "ANSWER_ID")
+	private String answerId;
 	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "QUESTION_ID", nullable = false, insertable = false, updatable = false)
+	@JoinColumn(name = "ANSWER_ID", nullable = false, insertable = false, updatable = false)
 	@JsonIgnore
-	private Question questionVoted;
-
+	private Answer answerVoted;
 
 	public Long getId() {
 		return id;
@@ -46,14 +46,6 @@ public class QuestionVote  extends BaseEntity {
 		this.userVoted = userVoted;
 	}
 
-	public Question getQuestionVoted() {
-		return questionVoted;
-	}
-
-	public void setQuestionVoted(Question questionVoted) {
-		this.questionVoted = questionVoted;
-	}
-
 	public String getUserId() {
 		return userId;
 	}
@@ -62,19 +54,27 @@ public class QuestionVote  extends BaseEntity {
 		this.userId = userId;
 	}
 
-	public String getQuestionId() {
-		return questionId;
+	public String getAnswerId() {
+		return answerId;
 	}
 
-	public void setQuestionId(String questionId) {
-		this.questionId = questionId;
+	public void setAnswerId(String answerId) {
+		this.answerId = answerId;
+	}
+
+	public Answer getAnswerVoted() {
+		return answerVoted;
+	}
+
+	public void setAnswerVoted(Answer answerVoted) {
+		this.answerVoted = answerVoted;
 	}
 
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof QuestionVote)) return false;
-		QuestionVote that = (QuestionVote) o;
+		if (!(o instanceof AnswerVote)) return false;
+		AnswerVote that = (AnswerVote) o;
 		return Objects.equals(getId(), that.getId());
 	}
 

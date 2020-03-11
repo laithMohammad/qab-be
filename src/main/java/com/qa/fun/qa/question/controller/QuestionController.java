@@ -1,11 +1,11 @@
-package com.qa.fun.qa.controllers;
+package com.qa.fun.qa.question.controller;
 
-import com.qa.fun.qa.model.QuestionRepo;
-import com.qa.fun.qa.model.QuestionVoteRepo;
-import com.qa.fun.qa.model.UserRepo;
-import com.qa.fun.qa.model.entity.Question;
-import com.qa.fun.qa.model.entity.QuestionVote;
-import com.qa.fun.qa.model.entity.User;
+import com.qa.fun.qa.question.model.QuestionRepo;
+import com.qa.fun.qa.vote.question.model.QuestionVoteRepo;
+import com.qa.fun.qa.user.model.UserRepo;
+import com.qa.fun.qa.question.model.Question;
+import com.qa.fun.qa.vote.question.model.QuestionVote;
+import com.qa.fun.qa.user.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

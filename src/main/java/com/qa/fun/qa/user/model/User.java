@@ -11,7 +11,6 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "USER", schema = "postgresql-reticulated-05900")
 public class User extends BaseEntity {
 
 	@Id

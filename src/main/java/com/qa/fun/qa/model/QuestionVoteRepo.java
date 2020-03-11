@@ -1,0 +1,13 @@
+package com.qa.fun.qa.model;
+
+import com.qa.fun.qa.model.entity.QuestionVote;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface QuestionVoteRepo extends JpaRepository<QuestionVote, Long> {
+
+	List<QuestionVote> findByQuestionVotedId(Long questionVoted);
+}

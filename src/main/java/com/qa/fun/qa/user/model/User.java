@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 
-@Entity
+@Entity(name = "USER_TABLE")
 public class User extends BaseEntity {
 
 	@Id

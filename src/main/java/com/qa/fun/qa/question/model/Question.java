@@ -24,7 +24,7 @@ public class Question extends BaseEntity {
 	private Set<Answer> answers;
 
 	@Column(name = "USER_ID")
-	private String userId;
+	private Long userId;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "USER_ID", nullable = false, insertable = false, updatable = false)
@@ -74,11 +74,11 @@ public class Question extends BaseEntity {
 		this.questionVotes = questionVotes;
 	}
 
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

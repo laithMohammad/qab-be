@@ -1,4 +1,10 @@
-package com.qa.fun.qa.model.entity;
+package com.qa.fun.qa.user.model;
+
+import com.qa.fun.qa.answer.model.Answer;
+import com.qa.fun.qa.common.model.BaseEntity;
+import com.qa.fun.qa.question.model.Question;
+import com.qa.fun.qa.vote.answer.model.AnswerVote;
+import com.qa.fun.qa.vote.question.model.QuestionVote;
 
 import javax.persistence.*;
 import java.util.Objects;

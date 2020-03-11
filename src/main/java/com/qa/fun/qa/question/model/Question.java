@@ -1,6 +1,10 @@
-package com.qa.fun.qa.model.entity;
+package com.qa.fun.qa.question.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.qa.fun.qa.answer.model.Answer;
+import com.qa.fun.qa.common.model.BaseEntity;
+import com.qa.fun.qa.vote.question.model.QuestionVote;
+import com.qa.fun.qa.user.model.User;
 
 import javax.persistence.*;
 import java.util.Objects;
